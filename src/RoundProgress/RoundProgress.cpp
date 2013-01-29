@@ -105,8 +105,7 @@ void RoundProgress::setImageSource (const QString& newImageSource)
         return;
     }
 
-    m_originalImage = image;
-    m_originalImage.convertToFormat(QImage::Format_ARGB32_Premultiplied);
+    m_originalImage = image.convertToFormat(QImage::Format_ARGB32_Premultiplied);
 
 	m_imageSource = newImageSource;
 	emit imageSourceChanged();
